@@ -56,4 +56,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ユーザー認証機能作成 Gem
-gem 'device'
+gem 'devise'
