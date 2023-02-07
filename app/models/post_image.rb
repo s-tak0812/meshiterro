@@ -1,4 +1,6 @@
 class PostImage < ApplicationRecord
+
+  #AvtiveStorageに投稿した画像を保存する設定
   has_one_attached :image
   # (model) PostImage : User = N : 1の関連付け
   belongs_to :user
