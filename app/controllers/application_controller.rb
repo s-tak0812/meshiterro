@@ -4,7 +4,7 @@ before_action :configure_permitted_parameters, if: :devise_controller?
 
   # サインイン後の遷移先指定 gem:deviseメソッド(after_sign_in_path_for)
   def after_sign_in_path_for(resource)
-    about_path
+    post_images_path
   end
 
   # サインアウト後の遷移先指定 gem:deviseメソッド(after_sign_out_path_for)
