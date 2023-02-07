@@ -8,6 +8,8 @@ class User < ApplicationRecord
   #及びuser削除の時に関連記事の削除指令
   has_many :post_images, dependent: :destroy
 
+  # (model)User : PostComment = 1 : Nの関連付け+destroy
+  has_many :post_comments, dependent: :destroy
 
   # ActiveStorageにprofili_imageを保存する設定
   has_one_attached :profile_image

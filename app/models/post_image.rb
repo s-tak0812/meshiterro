@@ -5,6 +5,8 @@ class PostImage < ApplicationRecord
   # (model) PostImage : User = N : 1の関連付け
   belongs_to :user
 
+  # (model)PostImage : PostComment = 1 : Nの関連付け+destroy
+  has_many :post_comments, dependent: :destroy
 
   def get_image
     unless image.attached?
