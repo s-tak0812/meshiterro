@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   # asでルート名変更
   get 'homes/about', as: 'about'
 
+ resources :post_images, only: [:new, :index, :show]
 end
