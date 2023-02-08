@@ -11,6 +11,9 @@ class User < ApplicationRecord
   # (model)User : PostComment = 1 : Nの関連付け+destroy
   has_many :post_comments, dependent: :destroy
 
+  # (model)User : Favorite = 1 : N +destroy
+  has_many :favorites, dependent: :destroy
+
   # ActiveStorageにprofili_imageを保存する設定
   has_one_attached :profile_image
 

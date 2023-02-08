@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :post_images, only: [:new, :create, :index, :show, :destroy] do
     # post_commentsはpost_imagesに依存する(親子関係)
     resources :post_comments, only: [:create, :destroy]
+    # ↓1つに対して1回しかアクションしない為favorite_idを特定する必要がない(URLに'/:idが不要')
+    resource :favorites, only: [:create, :destroy]
   end
 
   resources :users, only: [:show, :update, :edit]
