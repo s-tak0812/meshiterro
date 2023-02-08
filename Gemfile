@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ユーザー認証機能作成 Gem
 gem 'devise'
+gem 'kaminari','~> 1.2.1'
