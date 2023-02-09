@@ -20,7 +20,7 @@ class PostImagesController < ApplicationController
 
   def index
     # kaminari method=>.page
-    @post_images = PostImage.page(params[:page])
+    @post_images = PostImage.page(params[:page]).reverse_order
   end
 
   def show
